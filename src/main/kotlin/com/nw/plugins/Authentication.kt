@@ -11,13 +11,12 @@ import io.ktor.server.auth.jwt.jwt
 import java.util.concurrent.TimeUnit
 
 fun validateCredentials(credential: JWTCredential, permission: String? = null): JWTPrincipal? {
-
     val dotenv = dotenv()
     val audience = dotenv["AUTH0_AUDIENCE"]
 
     val containsAudience = credential.payload.audience.contains(audience)
     val containsScope = permission.isNullOrBlank() ||
-            credential.payload.claims["permissions"]?.asArray(String::class.java)?.contains(permission) == true
+        credential.payload.claims["permissions"]?.asArray(String::class.java)?.contains(permission) == true
 
     if (containsAudience && containsScope) {
         return JWTPrincipal(credential.payload)
@@ -27,7 +26,6 @@ fun validateCredentials(credential: JWTCredential, permission: String? = null): 
 }
 
 fun Application.configureAuth() {
-
     val dotenv = dotenv()
     val issuer = dotenv["AUTH0_ISSUER"]
 
