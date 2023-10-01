@@ -8,6 +8,7 @@ This is an PoC project demonstrating how to integrate Auth0 authentication and a
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Configuration](#configuration)
+- - [Links](#links)
 
 ## Getting Started
 
@@ -47,3 +48,9 @@ Before you begin, ensure you have met the following requirements:
    
 - **Audience** is the identifier of the API you want to call. It can be found in the API section of the Auth0 dashboard.
 - **Issuer** is the URL of the authorization server that will perform authentication. It can be found in the Settings section of the Auth0 dashboard.
+
+## Links
+
+- https://auth0.com/blog/creating-an-http-api-with-ktor-and-kotlin/
+- https://auth0.com/blog/adding-auth0-authorization-to-a-ktor-http-api/
+- https://auth0.com/blog/adding-auth0-rbac-authorization-to-a-ktor-api/
