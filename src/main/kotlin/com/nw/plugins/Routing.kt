@@ -13,6 +13,9 @@ import io.ktor.util.pipeline.PipelineContext
 
 fun Application.configureRouting() {
     routing {
+        get("/") {
+            call.respondText("Hello, world!")
+        }
         route("/api/messages") {
             get("/public") {
                 respondWithMessage("The API doesn't require an access token to share this message.")

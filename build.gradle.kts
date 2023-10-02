@@ -1,6 +1,7 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val kotestVersion: String by project
 
 plugins {
     kotlin("jvm") version "1.9.10"
@@ -33,4 +34,7 @@ dependencies {
     implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
+    testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
 }
